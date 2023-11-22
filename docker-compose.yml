@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  radius:
+    image: freeradius/freeradius-server:latest
+    container_name: radius
+    restart: always
+    environment:
+      TZ: 'Asia/Bangkok'
+    ports:
+      - '1812:1812'
+      - '1813:1813'
+    volumes:
+      - web-data:/etc/raddb
+networks:
+  default:
+    name: radius
+volumes:
+  radius-data:
