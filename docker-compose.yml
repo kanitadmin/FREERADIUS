@@ -4,8 +4,6 @@ services:
     image: freeradius/freeradius-server:latest
     container_name: radius
     restart: always
-    environment:
-      TZ: 'Asia/Bangkok'
     ports:
       - '1812:1812/tcp'
       - '1813:1813/tcp'
