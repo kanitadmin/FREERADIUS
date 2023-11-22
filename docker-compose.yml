@@ -10,7 +10,7 @@ services:
       - '1812:1812'
       - '1813:1813'
     volumes:
-      - web-data:/etc/raddb
+      - radius-data:/etc/raddb
 networks:
   default:
     name: radius
