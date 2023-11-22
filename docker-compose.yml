@@ -13,6 +13,8 @@ services:
       - '1813:1813/udp'
     volumes:
       - radius-data:/etc/raddb
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
 networks:
   default:
     name: radius
