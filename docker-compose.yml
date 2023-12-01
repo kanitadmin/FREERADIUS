@@ -4,17 +4,11 @@ services:
     image: freeradius/freeradius-server:latest
     container_name: radius
     restart: always
-    ports:
-      - '1812:1812/tcp'
-      - '1813:1813/tcp'
-      - '1812:1812/udp'
-      - '1813:1813/udp'
+    network_mode: "host"
     volumes:
       - radius-data:/etc/raddb
+      - radius-log:/var/log/freeradius
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-networks:
-  default:
-    name: radius
 volumes:
   radius-data:
