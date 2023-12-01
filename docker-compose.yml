@@ -1,14 +1,15 @@
 version: '3.8'
 services:
   radius:
-    image: freeradius/freeradius-server:latest
+    image: bucchub/freeradius:latest
     container_name: radius
     restart: always
     network_mode: "host"
     volumes:
-      - radius-data:/etc/raddb
+      - radius-config:/etc/raddb/client.conf
       - radius-log:/var/log/freeradius
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
 volumes:
-  radius-data:
+  radius-config:
+  radius-log:
