@@ -15,7 +15,7 @@ services:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DB=${MYSQL_DB}
     volumes:
-      - radius-config:/etc/raddb/client.conf
+      - radius-config:/etc/freeradius
       - radius-log:/var/log/freeradius
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
