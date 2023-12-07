@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   radius:
-    image: bucchub/freeradius:latest
+    image: bucchub/freeradius:3
     container_name: radius
     restart: always
     network_mode: "host"
