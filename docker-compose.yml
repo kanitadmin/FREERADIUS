@@ -6,14 +6,14 @@ services:
     restart: always
     network_mode: "host"
     environment:
-      - NPS_IP_01="${NPS_IP_01}"
-      - NPS_SECRETE_01="${NPS_SECRETE_01}"
-      - NPS_IP_02="${NPS_IP_02}"
-      - NPS_SECRETE_02="${NPS_IP_02}"
-      - MYSQL_IP="${MYSQL_IP}"
-      - MYSQL_USER="${MYSQL_USER}"
-      - MYSQL_PASSWORD="${MYSQL_PASSWORD}"
-      - MYSQL_DB="${MYSQL_DB}"
+      - NPS_IP_01=${NPS_IP_01}
+      - NPS_SECRETE_01=${NPS_SECRETE_01}
+      - NPS_IP_02=${NPS_IP_02}
+      - NPS_SECRETE_02=${NPS_IP_02}
+      - MYSQL_IP=${MYSQL_IP}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DB=${MYSQL_DB}
     volumes:
       - radius-config:/etc/raddb/client.conf
       - radius-log:/var/log/freeradius
